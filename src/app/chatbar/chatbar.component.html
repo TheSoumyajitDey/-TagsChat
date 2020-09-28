@@ -1,5 +1,32 @@
 <div class="form-group">
   <label for="usr">Chat Here:</label>
-  <input type="text" class="form-control" id="usr" />
-  <button class="btn btn-success mt-2" style="margin-top: 10px">Send</button>
+  <input
+    class="form-control"
+    type="text"
+    [(ngModel)]="chat"
+    (keyup)="onKey($event)"
+    list="browsers"
+    required
+  />
+  <datalist id="browsers" *ngIf="isVisible">
+    <option value="Chrome"></option>
+    <option value="Firefox"></option>
+    <option value="Internet Explorer"></option>
+    <option value="Opera"></option>
+    <option value="Safari"></option>
+    <option value="Microsoft Edge"></option>
+  </datalist>
+
+  <button
+    class="btn btn-success mt-2"
+    style="margin-top: 10px"
+    (click)="onChatAdded()"
+  >
+    Send
+  </button>
+</div>
+<div>
+  <div *ngFor="let chat of chats">
+    <h1>- {{ chat }}</h1>
+  </div>
 </div>
