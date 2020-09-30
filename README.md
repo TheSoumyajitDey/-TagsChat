@@ -9,8 +9,8 @@
 
 # Website Feature
 - Responsive anyscreen
-- Highly styled and maintaning same theme as the logo
-- Sign in with - Google(don't have google cloud account) and Facebook(done)
+- @ tag you friend in the chatbox like Facebook and Whatsapp
+- Chat appilcation in Front-ENd
 
 # Prerequisite for the system
 - System should have "NodeJS" already installed 
