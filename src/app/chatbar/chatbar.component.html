@@ -1,20 +1,19 @@
 <div class="form-group">
-  <label for="usr">Chat Here:</label>
-  <input
-    class="form-control chager"
-    type="text"
-    contenteditable="true"
-    [(ngModel)]="chat"
-    [mention]="item"
-    cols="0"
-    (keyup)="onKey($event)"
-    list="browsers"
-    required
-  />
-  <br />
-  <input type="button" class="boldText" value="Bold" />
-  <input type="button" class="italicText" value="Italic" />
-  <input type="button" class="underlineText" value="Underline" />
+  <label for="usr">Chat Here: (use '@' to tag people)</label>
+
+  <div class="row">
+    <div class="col-md-12">
+      <input
+        class="form-control chager"
+        type="text"
+        contenteditable="true"
+        [(ngModel)]="chat"
+        [mention]="item"
+        cols="0"
+        required
+      />
+    </div>
+  </div>
 
   <!-- <select class="form-control" id="browsers" *ngIf="isVisible">
     <option
@@ -26,14 +25,30 @@
       {{ people.name }}
     </option>
   </select> -->
-
-  <button
-    class="btn btn-success mt-2"
-    style="margin-left: 10px; margin-top: 10px"
-    (click)="onChatAdded()"
-  >
-    Send
-  </button>
+  <div class="row">
+    <div class="col-md-6">
+      <button
+        class="btn btn-success mt-2"
+        style="margin-top: 10px"
+        (click)="onChatAdded()"
+      >
+        Send
+      </button>
+    </div>
+    <div class="col-md-6">
+      <div class="checkbox">
+        <label style="margin-right: 10px"
+          ><input type="checkbox" value="" />Bold</label
+        >
+        <label style="margin-right: 10px"
+          ><input type="checkbox" value="" />Italics</label
+        >
+        <label style="margin-right: 10px"
+          ><input type="checkbox" value="" />Underline</label
+        >
+      </div>
+    </div>
+  </div>
 </div>
 <div>
   <div *ngFor="let chat of chats">
