@@ -9,7 +9,15 @@ import { FormsModule } from "@angular/forms";
 export class ChatbarComponent implements OnInit {
   chat: string;
   chats: any[] = [];
-  items: string[] = ["Noah", "Liam", "Mason", "Jacob"];
+  value = "";
+  item: string[] = ["Suraj", "Anil", "Anmol", "Praveen"];
+
+  // item: string[] = [
+  //   { "Suraj", id: "10" },
+  //   { "Anil", id: "15" },
+  //   { name: "Anmol", id: "13" },
+  //   { name: "Praveen", id: "11" },
+  // ];
   values = "";
   isVisible = false;
 

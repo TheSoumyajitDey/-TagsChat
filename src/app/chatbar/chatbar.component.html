@@ -1,25 +1,35 @@
 <div class="form-group">
   <label for="usr">Chat Here:</label>
   <input
-    class="form-control"
+    class="form-control chager"
     type="text"
+    contenteditable="true"
     [(ngModel)]="chat"
+    [mention]="item"
+    cols="0"
     (keyup)="onKey($event)"
     list="browsers"
     required
   />
-  <datalist id="browsers" *ngIf="isVisible">
-    <option value="Chrome"></option>
-    <option value="Firefox"></option>
-    <option value="Internet Explorer"></option>
-    <option value="Opera"></option>
-    <option value="Safari"></option>
-    <option value="Microsoft Edge"></option>
-  </datalist>
+  <br />
+  <input type="button" class="boldText" value="Bold" />
+  <input type="button" class="italicText" value="Italic" />
+  <input type="button" class="underlineText" value="Underline" />
+
+  <!-- <select class="form-control" id="browsers" *ngIf="isVisible">
+    <option
+      value="Chrome"
+      *ngFor="let people of items"
+      name="values"
+      [(ngModel)]="values"
+    >
+      {{ people.name }}
+    </option>
+  </select> -->
 
   <button
     class="btn btn-success mt-2"
-    style="margin-top: 10px"
+    style="margin-left: 10px; margin-top: 10px"
     (click)="onChatAdded()"
   >
     Send
