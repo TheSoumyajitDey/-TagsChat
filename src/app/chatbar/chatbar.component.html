@@ -15,16 +15,6 @@
     </div>
   </div>
 
-  <!-- <select class="form-control" id="browsers" *ngIf="isVisible">
-    <option
-      value="Chrome"
-      *ngFor="let people of items"
-      name="values"
-      [(ngModel)]="values"
-    >
-      {{ people.name }}
-    </option>
-  </select> -->
   <div class="row">
     <div class="col-md-6">
       <button
@@ -38,13 +28,21 @@
     <div class="col-md-6">
       <div class="checkbox">
         <label style="margin-right: 10px"
-          ><input type="checkbox" value="" />Bold</label
+          ><input type="checkbox" value="bold" class="bold" />Bold</label
         >
         <label style="margin-right: 10px"
-          ><input type="checkbox" value="" />Italics</label
+          ><input
+            type="checkbox"
+            value="italics"
+            class="italic"
+          />Italics</label
         >
         <label style="margin-right: 10px"
-          ><input type="checkbox" value="" />Underline</label
+          ><input
+            type="checkbox"
+            value="underline"
+            class="underline"
+          />Underline</label
         >
       </div>
     </div>

@@ -32,16 +32,16 @@ export class ChatbarComponent implements OnInit {
     this.chat = "";
   }
 
-  onKey(event: KeyboardEvent) {
-    if (
-      (event.target as HTMLInputElement).value.charAt(
-        (event.target as HTMLInputElement).value.length - 1
-      ) == "@"
-    ) {
-      console.log("@ working ");
-      this.isVisible = true;
-    } else {
-      this.isVisible = false;
-    }
-  }
+  // onKey(event: KeyboardEvent) {
+  //   if (
+  //     (event.target as HTMLInputElement).value.charAt(
+  //       (event.target as HTMLInputElement).value.length - 1
+  //     ) == "@"
+  //   ) {
+  //     console.log("@ working ");
+  //     this.isVisible = true;
+  //   } else {
+  //     this.isVisible = false;
+  //   }
+  // }
 }
